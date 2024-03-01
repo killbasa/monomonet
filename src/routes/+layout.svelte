@@ -4,4 +4,14 @@
 	import '$lib/styles/global.css';
 </script>
 
-<slot />
+<main>
+	<slot />
+</main>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+	}
+</style>
