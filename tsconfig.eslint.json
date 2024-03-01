@@ -1,0 +1,7 @@
+{
+	"extends": "@killbasa/ts-config",
+	"compilerOptions": {
+		"noEmit": true
+	},
+	"include": [".eslintrc.cjs"]
+}
