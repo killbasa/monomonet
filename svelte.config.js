@@ -6,9 +6,14 @@ import { resolve } from 'path';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			precompress: false,
+			strict: true
+		}),
 		alias: {
-			$components: resolve('./src/lib/components')
+			$components: resolve('./src/lib/components'),
+			$lib: resolve('./src/lib'),
+			$routes: resolve('./src/routes')
 		}
 	}
 };

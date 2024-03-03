@@ -9,6 +9,9 @@
 	<header>
 		<h1>Mono Monet</h1>
 	</header>
+	<div>
+		<a href="/bday2024" class="button">Birthday 2024</a>
+	</div>
 </section>
 
 <style>
