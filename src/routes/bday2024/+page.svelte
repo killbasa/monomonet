@@ -21,7 +21,6 @@
 	<header>
 		<h1>Mono Monet Birthday 2024</h1>
 	</header>
-	<h2>Messages</h2>
 	<div class="card-container">
 		{#each data.messages as message, i (i)}
 			<MessageCard data={message} />
@@ -29,7 +28,7 @@
 	</div>
 </section>
 
-<style>
+<style lang="scss">
 	section {
 		display: flex;
 		flex-direction: column;
@@ -50,6 +49,13 @@
 		justify-content: center;
 		padding: 2rem 1rem;
 		gap: 2rem;
+	}
+
+	@media only screen and (max-width: 640px) {
+		.card-container {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	@media only screen and (max-width: 1280px) {

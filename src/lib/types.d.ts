@@ -1,6 +1,6 @@
 export type Message = {
 	author: string;
 	message: string;
-	time: string;
+	time: Date;
 	//image?: string;
 };

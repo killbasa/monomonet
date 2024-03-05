@@ -21,11 +21,12 @@
 	.card {
 		background: var(--brand-purple);
 		position: relative;
-		padding: 0px 10px 10px 10px;
+		padding: 0px 10px 0 10px;
 		min-height: 100px;
 		width: 100%;
 		max-width: 512px;
-		border-radius: 8px;
+		border-radius: 4px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
 		background-repeat: repeat-y;
 		background-size: contain;
 
@@ -41,7 +42,7 @@
 			font-weight: bold;
 			padding: 5px 10px;
 			background-color: rgba(255, 255, 255, 0.75);
-			border-radius: 8px;
+			border-radius: 4px;
 			position: relative;
 			color: var(--color-text);
 		}
@@ -56,17 +57,17 @@
 		}
 		&.card-variant-1 {
 			.card-tabemono {
-				background-image: url('$routes/bday2024/assets/CiboPeek.png');
+				background-image: url('$assets/bday2024/images/CiboPeek.png');
 			}
 		}
 		&.card-variant-2 {
 			.card-tabemono {
-				background-image: url('$routes/bday2024/assets/CiboPeek.png');
+				background-image: url('$assets/bday2024/images/CiboPeek.png');
 			}
 		}
 		&.card-variant-3 {
 			.card-tabemono {
-				background-image: url('$routes/bday2024/assets/CiboPeek.png');
+				background-image: url('$assets/bday2024/images/CiboPeek.png');
 			}
 		}
 	}

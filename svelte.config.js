@@ -12,6 +12,7 @@ const config = {
 		}),
 		alias: {
 			$components: resolve('./src/lib/components'),
+			$assets: resolve('./src/assets'),
 			$lib: resolve('./src/lib'),
 			$routes: resolve('./src/routes')
 		}

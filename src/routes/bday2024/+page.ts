@@ -1,13 +1,13 @@
-import type { Message } from '$lib/types';
+import { MessageSchema } from '$lib/utils';
 import type { PageLoad } from './$types';
-import messages from './data/messages.json' with { type: 'json' };
+import messages from '$assets/bday2024/messages.json' with { type: 'json' };
 
 export const load: PageLoad = async () => {
-	const data = messages as unknown as { messages: Message[] };
+	const data = MessageSchema.parse(messages);
 
 	return {
 		messages: data.messages.sort((a, b) => {
-			return new Date(a.time).getTime() - new Date(b.time).getTime();
+			return a.time.getTime() - b.time.getTime();
 		})
 	};
 };
