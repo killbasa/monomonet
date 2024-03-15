@@ -18,8 +18,11 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+
       - name: Build project
-        run: |
-          yarn install --immutable
-          yarn lint
-          yarn build
+        run: npm run build
