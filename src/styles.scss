@@ -1,0 +1,23 @@
+:root {
+	--mono-purple: #c695e8;
+	--mono-yellow: #fffe72;
+	--mono-red: #db6f6f;
+	--mono-blue: #609dff;
+	--mono-pink: #fe6cfe;
+}
+
+body {
+	background-color: var(--mono-purple);
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.footer {
+	margin-top: 200px;
+	bottom: 0;
+	width: 100%;
+}
