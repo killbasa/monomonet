@@ -16,7 +16,7 @@ More specific decisions for the design will be made in the V4Mirai official Disc
 
 ### Workflow
 
-This isn't a super serious project, so feel free to make weird suggestion you thing would be cool. All skill levels are welcome!
+This isn't a super serious project, so feel free to make weird suggestions you thing would be cool. All skill levels are welcome!
 
 You can suggest changes by commiting your changes to your fork and opening a [pull request](https://github.com/killbasa/monomonet/pulls).
 
