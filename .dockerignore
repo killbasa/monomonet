@@ -1,0 +1,13 @@
+.git/
+.husky/
+.vscode/
+dist/
+node_modules/
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.gitattributes
+.gitignore
+.prettierignore
+.prettierrc
+LICENSE
