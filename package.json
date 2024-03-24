@@ -12,7 +12,7 @@
 	"scripts": {
 		"prepare": "husky",
 		"dev": "vite",
-		"build": "tsc && vite build",
+		"build": "tsc && vite build --emptyOutDir",
 		"preview": "vite preview",
 		"lint": "eslint . --fix",
 		"format": "prettier --write ."
