@@ -13,7 +13,8 @@ export const setupSounds = () => {
 			audioBuffer.set(num, audio);
 		}
 
-		audio.play();
+		const clone = audio.cloneNode() as HTMLAudioElement;
+		clone.play();
 		smooch();
 	});
 };
