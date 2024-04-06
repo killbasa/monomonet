@@ -2,7 +2,7 @@ import { htmlTemplate, randomInt } from './utils';
 
 const audioBuffer = new Map<number, HTMLAudioElement>();
 
-export const setupSounds = () => {
+export const setupSmooches = () => {
 	const button = document.getElementById('cibo-audio-button');
 
 	button?.addEventListener('click', () => {

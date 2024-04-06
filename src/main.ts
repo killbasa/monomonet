@@ -1,5 +1,3 @@
-import { setupMessages } from './lib/messages';
-import { setupSounds } from './lib/sounds';
+import { setupSmooches } from './lib/sounds';
 
-setupMessages();
-setupSounds();
+setupSmooches();
