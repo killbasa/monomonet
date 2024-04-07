@@ -1,3 +1,7 @@
 import { setupSmooches } from './lib/sounds';
 
-await setupSmooches();
+async function main() {
+	await setupSmooches();
+}
+
+void main();
