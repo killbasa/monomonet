@@ -11,6 +11,14 @@
 		{
 			"author": "Kairo",
 			"path": "/cibos/cibo_kairo.png"
+		},
+		{
+			"author": "Killbasa",
+			"path": "/cibos/cibo_killbasa.png"
+		},
+		{
+			"author": "CommandThrow",
+			"path": "/cibos/cibo_commandthrow.png"
 		}
 	]
 }

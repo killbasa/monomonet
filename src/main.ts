@@ -1,3 +1,3 @@
 import { setupSmooches } from './lib/sounds';
 
-setupSmooches();
+await setupSmooches();
