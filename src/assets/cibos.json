@@ -19,6 +19,22 @@
 		{
 			"author": "CommandThrow",
 			"path": "/cibos/cibo_commandthrow.png"
+		},
+		{
+			"author": "Mohamad",
+			"path": "/cibos/cibo_mohamad.png"
+		},
+		{
+			"author": "ForRealJoker",
+			"path": "/cibos/cibo_forrealjoker.png"
+		},
+		{
+			"author": "Gadzooki",
+			"path": "/cibos/cibo_gadzooki.png"
+		},
+		{
+			"author": "Razan",
+			"path": "/cibos/cibo_razan.png"
 		}
 	]
 }

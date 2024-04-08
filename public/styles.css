@@ -18,3 +18,9 @@ body {
 	width: auto;
 	z-index: 1;
 }
+
+@media (max-width: 600px) {
+	.painter-image {
+		visibility: hidden;
+	}
+}
