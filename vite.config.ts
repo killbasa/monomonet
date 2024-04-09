@@ -9,6 +9,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: 'src/index.html',
+				cibos: 'src/cibos.html',
 				credits: 'src/credits.html'
 			}
 		}
