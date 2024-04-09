@@ -1,28 +1,25 @@
+import { loadBlobs } from './blobs';
 import { htmlTemplate, randomInt } from './utils';
 
-const audioCache = new Map<number, HTMLAudioElement>();
+const audioCache: HTMLAudioElement[] = [];
 
 export const setupSmooches = async () => {
 	const button = document.getElementById('cibo-audio-button');
 
-	const promises: Promise<Response>[] = [];
+	const urls: string[] = [];
 	for (let i = 1; i <= 7; i++) {
-		promises.push(fetch(`/sounds/smooch${i}.mp3`));
+		urls.push(`/sounds/smooch${i}.mp3`);
 	}
 
-	const smooches = await Promise.allSettled(promises);
-	for (const [i, response] of smooches.entries()) {
-		if (response.status === 'fulfilled') {
-			const blob = await response.value.blob();
-			const audio = new Audio(URL.createObjectURL(blob));
-
-			audioCache.set(i, audio);
-		}
+	const blobs = await loadBlobs(urls);
+	for (const blob of blobs) {
+		const audio = new Audio(blob);
+		audioCache.push(audio);
 	}
 
 	button?.addEventListener('click', () => {
-		const num = randomInt(1, audioCache.size);
-		const audio = audioCache.get(num);
+		const num = randomInt(1, audioCache.length - 1);
+		const audio = audioCache.at(num);
 
 		const clone = audio?.cloneNode() as HTMLAudioElement | undefined;
 		clone?.play();

@@ -4,7 +4,7 @@ export function setupMessages() {
 	const messageString = messages.data.map((entry) => {
 		return `
 		<li style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
-			<img width="300px" src="${entry.path}" alt="a cibo" loading="lazy" />
+			<img loading="lazy" width="300px" src="${entry.path}" alt="a cibo"/>
 			<h2 style="margin-top: 0;">${entry.author}</h2>
 		</li>
 		  `;
