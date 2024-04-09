@@ -27,20 +27,37 @@
 		<meta name="msapplication-TileColor" content="#da532c" />
 		<meta name="theme-color" content="#FFFE72" />
 		<script type="module" src="/main.ts"></script>
-		<script type="module" src="/messages.ts"></script>
 	</head>
 	<body>
 		<main>
-			<div style="margin-top: 100px">
-				<img src="/images/mono_pat.gif" width="150px" />
-				<div style="display: flex; justify-content: center; align-items: center">
+			<div id="sidebar">
+				<img src="/images/monolove.png" width="150px" />
+				<br />
+				<a href="/">
+					<img id="home-anchor" />
+				</a>
+				<br />
+				<a href="/cibos">
+					<img id="cibos-anchor" />
+				</a>
+				<br />
+				<a href="/credits">
+					<img id="credits-anchor" />
+				</a>
+			</div>
+			<div id="container">
+				<img src="/images/mono_pat.gif" width="150px" style="margin-bottom: 50px" />
+				<div
+					class="title_hydrangea"
+					style="display: flex; justify-content: center; align-items: center"
+				>
 					<img src="/images/painter.gif" width="100px" class="painter-image" />
-					<img src="/images/title_hbd.png" width="500px" alt="Happy birthday Mono!" />
+					<img src="/ui/title_hbd.png" width="500px" alt="Happy birthday Mono!" />
 					<img src="/images/painter.gif" width="100px" class="painter-image" />
 				</div>
 				<div
 					style="
-						margin-top: 100px;
+						margin-top: 50px;
 						align-items: center;
 						display: flex;
 						flex-direction: column;
@@ -55,25 +72,16 @@
 					<img src="/images/thumbsup.gif" width="150px" alt="Mono thumbsup" />
 				</div>
 			</div>
-			<div style="margin-top: 100px">
-				<img src="/images/title_cibo.png" width="400px" alt="Cibo hall of fame" />
-				<ul id="cibo-list" style="list-style: none; padding-left: 0"></ul>
-			</div>
 		</main>
 		<div style="position: fixed; bottom: -5px; right: 0">
 			<button
 				id="cibo-audio-button"
 				style="background: transparent; border: none; cursor: pointer"
 			>
-				<img src="/images/cibo_peek.png" width="150px" />
+				<img src="/ui/cibo_peek.png" width="150px" />
 			</button>
 		</div>
-		<div style="margin-top: 100px">
-			<a href="/credits">
-				<img id="credits-anchor" />
-			</a>
-		</div>
-		<div style="margin-top: 50px; display: flex; flex-direction: column; align-items: center">
+		<div id="container">
 			<img src="/images/parappa.gif" width="100px" />
 			<a href="https://www.free-website-hit-counter.com">
 				<img
