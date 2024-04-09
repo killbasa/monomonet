@@ -26,34 +26,36 @@ body {
 }
 
 .title_hydrangea {
-	background: #01013d;
-    background-image: url(/images/flower_background.png);
-    background-attachment: local;
-    margin-top: 25px;
-    margin-right: 25%;
-    margin-left: 25%;
-    text-align: center;
-    border: 5px outset #29adff;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    padding: 15px;
-    position: relative;
-    box-shadow: 10px 10px 25px #fe77a8;
+	background-image: url('/images/flower_background.png');
+	background-attachment: local;
+	margin: 0 25% 50px 25%;
+	text-align: center;
+	border: 5px outset #29adff;
+	padding: 15px;
+	box-shadow: 10px 10px 25px #fe77a8;
+}
+
+#container {
+	margin-top: 50px;
+	margin-left: 20%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 #sidebar {
 	height: 100%;
-    width: 20%;
-    box-sizing: border-box;
-    background: #cb91e5;
-    text-align: center;
-    border-right: 5px ridge #9758c0;
-    margin: auto;
-    top: 0px;
-    left: 0px;
-    float: left;
-    padding: 15px;
-    overflow: hidden;
-    position: fixed;
-    box-shadow: 10px 0px 25px #9758c0;
+	width: 20%;
+	box-sizing: border-box;
+	background: #cb91e5;
+	text-align: center;
+	border-right: 5px ridge #9758c0;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	float: left;
+	padding: 15px;
+	overflow: hidden;
+	position: fixed;
+	box-shadow: 10px 0px 25px #9758c0;
 }
