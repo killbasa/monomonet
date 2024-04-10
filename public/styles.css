@@ -3,12 +3,19 @@
 	--mono-yellow: #fffe72;
 	--mono-red: #db6f6f;
 	--mono-blue: #609dff;
+	--mono-dark-blue: #2f6aca;
 	--mono-pink: #fe6cfe;
 }
 
 body {
 	background-color: var(--mono-blue);
 	text-align: center;
+	font-family: "Comic Sans MS", "Comic Sans";
+	font-size: 1.5em;
+	font-weight: bold;
+	background-image: url('/images/mono_background.png');
+	background-size: contain;
+	text-shadow: -1px 0 5px var(--mono-purple), 0 1px 5px var(--mono-purple), 1px 0 5px var(--mono-purple), 0 -1px 5px var(--mono-purple);
 }
 
 .cibo-kiss {
@@ -23,6 +30,38 @@ body {
 	.painter-image {
 		visibility: hidden;
 	}
+}
+
+p::first-letter {
+	font-size: 2em;
+	color: var(--mono-yellow);
+}
+
+li > b {
+	font-size: 1.5em;
+	color: var(--mono-red);
+}
+
+b::first-letter {
+	font-size: 1.75em;
+	color: var(--mono-yellow);
+}
+
+p, span, ul, li {
+	color: var(--mono-dark-blue);
+}
+
+.text-content {
+	width: 600px;
+    background: #fe6cfe;
+    background-attachment: local;
+    text-align: center;
+    border: 5px outset var(--mono-yellow);
+	background-image: url('/images/rainbow_pattern.png');
+    margin-bottom: 50px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 10px 10px 25px #609dff;
 }
 
 .title_hydrangea {
