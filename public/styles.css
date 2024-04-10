@@ -74,6 +74,31 @@ p, span, ul, li {
 	box-shadow: 10px 10px 25px #fe77a8;
 }
 
+#cibo-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+
+.cibo-message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	background-color: var(--mono-purple);
+	border: 5px ridge #9758c0;
+	padding: 1rem 5rem;
+}
+
+.cibo-message > img {
+	padding: 2rem 0;
+}
+
+.cibo-message > h2 {
+	margin: 0;
+	text-shadow: none;
+}
+
 #container {
 	margin-top: 50px;
 	margin-left: 20%;
