@@ -44,7 +44,7 @@ function smooch() {
 	kiss.style.scale = `${scale}`;
 	kiss.style.rotate = `${deg}deg`;
 	kiss.style.top = `calc(${randomInt(10, 90)}vh - ${height}px)`;
-	kiss.style.left = `calc(${randomInt(30, 70)}vw - ${width}px)`;
+	kiss.style.left = `calc(${randomInt(10, 90)}vw - ${width}px)`;
 	document.body.insertAdjacentElement('beforeend', kiss);
 
 	setTimeout(() => {
