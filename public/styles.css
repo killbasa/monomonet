@@ -10,7 +10,7 @@
 body {
 	background-color: var(--mono-blue);
 	text-align: center;
-  font-family: 'Comic Sans MS', 'Comic Sans';
+	font-family: 'Comic Sans MS', 'Comic Sans';
 	font-size: 1.5em;
 	font-weight: bold;
 	background-image: url('/images/mono_background.png');
@@ -23,7 +23,8 @@ body {
 	cursor: url('/images/brush_cursor.png'), auto;
 }
 
-a, a:hover {
+a,
+a:hover {
 	cursor: url('images/brush_cursor_hover.png'), auto;
 }
 
@@ -99,7 +100,7 @@ li {
 	margin-top: 20px;
 	background-color: var(--mono-purple);
 	border: 5px ridge #9758c0;
-  padding: 0.5rem 4rem;
+	padding: 0.5rem 4rem;
 }
 
 .cibo-message > img {
