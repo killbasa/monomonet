@@ -94,7 +94,7 @@ li {
 	margin-top: 20px;
 	background-color: var(--mono-purple);
 	border: 5px ridge #9758c0;
-	padding: 1rem 5rem;
+	padding: 0.5rem 4rem;
 }
 
 .cibo-message > img {
