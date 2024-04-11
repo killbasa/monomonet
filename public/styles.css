@@ -10,12 +10,16 @@
 body {
 	background-color: var(--mono-blue);
 	text-align: center;
-	font-family: "Comic Sans MS", "Comic Sans";
+  font-family: 'Comic Sans MS', 'Comic Sans';
 	font-size: 1.5em;
 	font-weight: bold;
 	background-image: url('/images/mono_background.png');
 	background-size: contain;
-	text-shadow: -1px 0 5px var(--mono-purple), 0 1px 5px var(--mono-purple), 1px 0 5px var(--mono-purple), 0 -1px 5px var(--mono-purple);
+	text-shadow:
+		-1px 0 5px var(--mono-purple),
+		0 1px 5px var(--mono-purple),
+		1px 0 5px var(--mono-purple),
+		0 -1px 5px var(--mono-purple);
 	cursor: url('/images/brush_cursor.png'), auto;
 }
 
@@ -52,21 +56,24 @@ b::first-letter {
 	color: var(--mono-yellow);
 }
 
-p, span, ul, li {
+p,
+span,
+ul,
+li {
 	color: var(--mono-dark-blue);
 }
 
 .text-content {
 	width: 600px;
-    background: #fe6cfe;
-    background-attachment: local;
-    text-align: center;
-    border: 5px outset var(--mono-yellow);
+	background: #fe6cfe;
+	background-attachment: local;
+	text-align: center;
+	border: 5px outset var(--mono-yellow);
 	background-image: url('/images/rainbow_pattern.png');
-    margin-bottom: 50px;
-    padding: 15px;
-    position: relative;
-    box-shadow: 10px 10px 25px #609dff;
+	margin-bottom: 50px;
+	padding: 15px;
+	position: relative;
+	box-shadow: 10px 10px 25px #609dff;
 }
 
 .title_hydrangea {
@@ -92,7 +99,7 @@ p, span, ul, li {
 	margin-top: 20px;
 	background-color: var(--mono-purple);
 	border: 5px ridge #9758c0;
-	padding: 1rem 5rem;
+  padding: 0.5rem 4rem;
 }
 
 .cibo-message > img {
