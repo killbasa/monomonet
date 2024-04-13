@@ -139,12 +139,6 @@ li {
 	box-shadow: 10px 0px 25px #9758c0;
 }
 
-#cibo-juice {
-}
-
-#cibo-jump {
-}
-
 @media (max-width: 1400px) {
 	.spinning-flower-image {
 		display: none;
