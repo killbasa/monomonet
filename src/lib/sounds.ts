@@ -2,12 +2,13 @@ import { loadBlobs } from './blobs';
 import { htmlTemplate, randomInt } from './utils';
 
 const audioCache: HTMLAudioElement[] = [];
+let lastSmooch = 0;
 
 export const setupSmooches = async () => {
 	const button = document.getElementById('cibo-audio-button');
 
 	const urls: string[] = [];
-	for (let i = 1; i <= 7; i++) {
+	for (let i = 1; i <= 25; i++) {
 		urls.push(`/sounds/smooch${i}.mp3`);
 	}
 
@@ -18,7 +19,12 @@ export const setupSmooches = async () => {
 	}
 
 	button?.addEventListener('click', () => {
-		const num = randomInt(1, audioCache.length - 1);
+		let num = randomInt(1, audioCache.length - 1);
+		if (num === lastSmooch) {
+			num = (num + 1) % audioCache.length;
+		}
+
+		lastSmooch = num;
 		const audio = audioCache.at(num);
 
 		const clone = audio?.cloneNode() as HTMLAudioElement | undefined;
