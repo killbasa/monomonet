@@ -7,6 +7,10 @@
 	--mono-pink: #fe6cfe;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: var(--mono-blue);
 	text-align: center;
@@ -36,12 +40,6 @@ a:hover {
 	z-index: 1;
 }
 
-@media (max-width: 600px) {
-	.painter-image {
-		visibility: hidden;
-	}
-}
-
 p::first-letter {
 	font-size: 2em;
 	color: var(--mono-yellow);
@@ -65,7 +63,8 @@ li {
 }
 
 .text-content {
-	width: 600px;
+	width: 80%;
+	max-width: 800px;
 	background: #fe6cfe;
 	background-attachment: local;
 	text-align: center;
@@ -78,6 +77,8 @@ li {
 }
 
 .title_hydrangea {
+	width: 80%;
+	max-width: 800px;
 	background-image: url('/images/flower_background.png');
 	background-attachment: local;
 	margin: 0 25% 50px 25%;
@@ -123,17 +124,29 @@ li {
 #sidebar {
 	height: 100%;
 	width: 20%;
-	box-sizing: border-box;
+	min-width: 200px;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background: #cb91e5;
 	background-image: url('/images/confetti.gif');
-	text-align: center;
 	border-right: 5px ridge #9758c0;
-	margin: auto;
 	top: 0px;
 	left: 0px;
 	float: left;
 	padding: 15px;
-	overflow: hidden;
-	position: fixed;
 	box-shadow: 10px 0px 25px #9758c0;
+}
+
+#cibo-juice {
+}
+
+#cibo-jump {
+}
+
+@media (max-width: 1400px) {
+	.spinning-flower-image {
+		display: none;
+	}
 }
