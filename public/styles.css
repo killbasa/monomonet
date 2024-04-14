@@ -17,19 +17,19 @@ body {
 	font-family: 'Comic Sans MS', 'Comic Sans';
 	font-size: 1.5em;
 	font-weight: bold;
-	background-image: url('/images/mono_background.png');
+	background-image: url('/ui/mono_background.webp');
 	background-size: contain;
 	text-shadow:
 		-1px 0 5px var(--mono-purple),
 		0 1px 5px var(--mono-purple),
 		1px 0 5px var(--mono-purple),
 		0 -1px 5px var(--mono-purple);
-	cursor: url('/images/brush_cursor.png'), auto;
+	cursor: url('/ui/brush_cursor.png'), auto;
 }
 
 a,
 a:hover {
-	cursor: url('images/brush_cursor_hover.png'), auto;
+	cursor: url('ui/brush_cursor_hover.png'), auto;
 }
 
 .cibo-kiss {
@@ -69,7 +69,7 @@ li {
 	background-attachment: local;
 	text-align: center;
 	border: 5px outset var(--mono-yellow);
-	background-image: url('/images/rainbow_pattern.png');
+	background-image: url('/ui/rainbow_pattern.webp');
 	margin-bottom: 50px;
 	padding: 15px;
 	position: relative;
@@ -80,7 +80,7 @@ li {
 	width: 80%;
 	max-width: 800px;
 	min-width: 600px;
-	background-image: url('/images/flower_background.png');
+	background-image: url('/ui/flower_background.webp');
 	background-attachment: local;
 	margin: 0 auto 50px auto;
 	text-align: center;
@@ -132,7 +132,7 @@ li {
 	flex-direction: column;
 	align-items: center;
 	background: #cb91e5;
-	background-image: url('/images/confetti.gif');
+	background-image: url('/ui/confetti.gif');
 	border-right: 5px ridge #9758c0;
 	top: 0px;
 	left: 0px;

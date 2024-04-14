@@ -2,79 +2,79 @@
 	"data": [
 		{
 			"author": "Shiroe",
-			"path": "/cibos/cibo_shiroe.png"
+			"path": "/cibos/cibo_shiroe.webp"
 		},
 		{
 			"author": "Forte ZX",
-			"path": "/cibos/cibo_fortezx.png"
+			"path": "/cibos/cibo_fortezx.webp"
 		},
 		{
 			"author": "Kairo",
-			"path": "/cibos/cibo_kairo.png"
+			"path": "/cibos/cibo_kairo.webp"
 		},
 		{
 			"author": "Killbasa",
-			"path": "/cibos/cibo_killbasa.png"
+			"path": "/cibos/cibo_killbasa.webp"
 		},
 		{
 			"author": "CommandThrow",
-			"path": "/cibos/cibo_commandthrow.png"
+			"path": "/cibos/cibo_commandthrow.webp"
 		},
 		{
 			"author": "Mohamad",
-			"path": "/cibos/cibo_mohamad.png"
+			"path": "/cibos/cibo_mohamad.webp"
 		},
 		{
 			"author": "ForRealJoker",
-			"path": "/cibos/cibo_forrealjoker.png"
+			"path": "/cibos/cibo_forrealjoker.webp"
 		},
 		{
 			"author": "Gadzooki",
-			"path": "/cibos/cibo_gadzooki.png"
+			"path": "/cibos/cibo_gadzooki.webp"
 		},
 		{
 			"author": "Razan",
-			"path": "/cibos/cibo_razan.png"
+			"path": "/cibos/cibo_razan.webp"
 		},
 		{
 			"author": "Sora Bowden",
-			"path": "/cibos/cibo_sorabowden.png"
+			"path": "/cibos/cibo_sorabowden.webp"
 		},
 		{
 			"author": "Josh Hartmann",
-			"path": "/cibos/cibo_joshhartmann.png"
+			"path": "/cibos/cibo_joshhartmann.webp"
 		},
 		{
 			"author": "Exc3ed",
-			"path": "/cibos/cibo_exc3ed.png"
+			"path": "/cibos/cibo_exc3ed.webp"
 		},
 		{
 			"author": "Nyrator",
-			"path": "/cibos/cibo_nyrator.png"
+			"path": "/cibos/cibo_nyrator.webp"
 		},
 		{
 			"author": "Zein",
-			"path": "/cibos/cibo_zein.png"
+			"path": "/cibos/cibo_zein.webp"
 		},
 		{
 			"author": "NerdBlasé",
-			"path": "/cibos/cibo_nerdblase.png"
+			"path": "/cibos/cibo_nerdblase.webp"
 		},
 		{
 			"author": "AbhainnRìgh",
-			"path": "/cibos/cibo_abhainnrigh.png"
+			"path": "/cibos/cibo_abhainnrigh.webp"
 		},
 		{
 			"author": "ChickenKaichou",
-			"path": "/cibos/cibo_chickenkaichou.png"
+			"path": "/cibos/cibo_chickenkaichou.webp"
 		},
 		{
 			"author": "outcast777",
-			"path": "/cibos/cibo_outcast777.png"
+			"path": "/cibos/cibo_outcast777.webp"
 		},
 		{
 			"author": "rubix",
-			"path": "/cibos/cibo_rubix.png"
+			"path": "/cibos/cibo_rubix.webp"
 		},
 		{
 			"author": "Undefined404",
@@ -82,7 +82,11 @@
 		},
 		{
 			"author": "saviormist",
-			"path": "/cibos/cibo_saviormist.png"
+			"path": "/cibos/cibo_saviormist.webp"
+		},
+		{
+			"author": "AtomB",
+			"path": "/cibos/cibo_atomb.webp"
 		}
 	]
 }
