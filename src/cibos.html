@@ -57,10 +57,23 @@
 				</a>
 			</div>
 			<div id="container">
-				<div class="title_hydrangea">
-					<marquee behavior="scroll" direction="left" scrolldelay="0" scrollamount="10">
-						<img src="/ui/title_cibos.png" width="400px" alt="Cibo hall of fame" />
-					</marquee>
+				<div style="display: flex">
+					<img src="/images/cibo_hello.png" id="cibo-hello" />
+					<div class="title_hydrangea">
+						<marquee
+							behavior="scroll"
+							direction="left"
+							scrolldelay="0"
+							scrollamount="10"
+						>
+							<img src="/ui/title_cibos.png" width="400px" alt="Cibo hall of fame" />
+						</marquee>
+					</div>
+					<img
+						src="/images/cibo_hello.png"
+						id="cibo-hello"
+						style="transform: scaleX(-1)"
+					/>
 				</div>
 				<ul id="cibo-list" style="list-style: none; padding-left: 0"></ul>
 			</div>

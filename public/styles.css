@@ -79,10 +79,12 @@ li {
 .title_hydrangea {
 	width: 80%;
 	max-width: 800px;
+	min-width: 600px;
 	background-image: url('/images/flower_background.png');
 	background-attachment: local;
-	margin: 0 25% 50px 25%;
+	margin: 0 auto 50px auto;
 	text-align: center;
+	align-items: center;
 	border: 5px outset #29adff;
 	padding: 15px;
 	box-shadow: 10px 10px 25px #fe77a8;
@@ -141,6 +143,9 @@ li {
 
 @media (max-width: 1400px) {
 	.spinning-flower-image {
+		display: none;
+	}
+	#cibo-hello {
 		display: none;
 	}
 }
