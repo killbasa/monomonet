@@ -80,7 +80,7 @@ li {
 	width: 80%;
 	max-width: 800px;
 	min-width: 600px;
-	background-image: url('/ui/flower_background.webp');
+	background-image: url('/ui/flower_background.png');
 	background-attachment: local;
 	margin: 0 auto 50px auto;
 	text-align: center;
