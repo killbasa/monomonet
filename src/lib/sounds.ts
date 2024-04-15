@@ -35,7 +35,7 @@ export const setupSmooches = async () => {
 
 function smooch() {
 	const element = htmlTemplate(`
-	<div class="cibo-kiss" style="position: fixed;">
+	<div class="cibo-kiss" style="position: fixed; z-index: 99;">
 		<img src="/images/kiss.svg" height="200" width="200"/>
 	</div>`);
 
