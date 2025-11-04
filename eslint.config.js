@@ -8,21 +8,21 @@ const config = [
 	...eslintConfig(cfg),
 	{
 		name: 'ignore',
-		ignores: ['.svelte-kit/', '.yarn/', 'build/', 'node_modules/', 'terraform/']
+		ignores: ['.svelte-kit/', '.yarn/', '.wrangler/', 'build/', 'node_modules/', 'terraform/'],
 	},
 	{
 		files: ['**/*.svelte'],
 		rules: {
 			'import/no-duplicates': 'off',
-			'import/no-unresolved': ['error', { ignore: ['^\\$app/', '^\\$env'] }]
-		}
+			'import/no-unresolved': ['error', { ignore: ['^\\$app/', '^\\$env'] }],
+		},
 	},
 	{
 		files: ['**/*.ts'],
 		rules: {
-			'import/no-unresolved': ['error', { ignore: ['^\\$app/', '^\\$env', '^\\$lib/'] }]
-		}
-	}
+			'import/no-unresolved': ['error', { ignore: ['^\\$app/', '^\\$env', '^\\$lib/'] }],
+		},
+	},
 ];
 
 export default config;

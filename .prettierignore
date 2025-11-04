@@ -1,6 +1,7 @@
 .gitsecret/
 .svelte-kit/
 .yarn/
+.wrangler/
 build/
 node_modules/
 static/

@@ -10,7 +10,7 @@ export async function setupButtonImage(id: string, prefix: string): Promise<void
 	const blobs = await loadBlobs([
 		`/bday2024/ui/${prefix}_button1.png`,
 		`/bday2024/ui/${prefix}_button2.png`,
-		`/bday2024/ui/${prefix}_button3.png`
+		`/bday2024/ui/${prefix}_button3.png`,
 	]);
 
 	element.src = blobs[0];
