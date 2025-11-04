@@ -5,14 +5,17 @@ import { resolve } from 'path';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
+	compilerOptions: {
+		runes: true
+	},
 	kit: {
 		adapter: adapter({
 			precompress: false,
 			strict: true
 		}),
 		alias: {
-			$components: resolve('./src/lib/components'),
 			$assets: resolve('./src/assets'),
+			$components: resolve('./src/components'),
 			$lib: resolve('./src/lib'),
 			$routes: resolve('./src/routes')
 		}

@@ -1,9 +1,12 @@
 {
-	"extends": "@killbasa/ts-config",
+	"extends": "./tsconfig.json",
 	"compilerOptions": {
-		"noEmit": true,
-		"allowJs": true,
-		"checkJs": true
+		"noEmit": true
 	},
-	"include": [".eslintrc.cjs"]
+	"include": [
+		"src", //
+		"eslint.config.js",
+		"svelte.config.js",
+		"vite.config.ts"
+	]
 }
