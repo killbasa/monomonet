@@ -13,7 +13,7 @@
 			setupSmooches(),
 			setupButtonImage('credits-anchor', 'credits'),
 			setupButtonImage('cibos-anchor', 'cibos'),
-			setupButtonImage('home-anchor', 'home')
+			setupButtonImage('home-anchor', 'home'),
 		]);
 	});
 </script>
