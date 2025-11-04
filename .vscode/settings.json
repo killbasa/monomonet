@@ -1,13 +1,26 @@
 {
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
+	"search.exclude": {
+		".yarn/": true
+	},
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	"typescript.referencesCodeLens.enabled": true,
 	"eslint.format.enable": true,
-	"eslint.validate": ["javascript", "typescript"],
+	"eslint.validate": ["javascript", "typescript", "svelte"],
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[terraform]": {
+		"editor.defaultFormatter": "hashicorp.terraform"
+	},
+	"[terraform-vars]": {
+		"editor.defaultFormatter": "hashicorp.terraform"
 	}
 }

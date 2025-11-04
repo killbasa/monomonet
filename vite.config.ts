@@ -1,17 +1,13 @@
+import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import type { CommonServerOptions } from 'vite';
+
+const serverOptions: CommonServerOptions = {
+	port: 5173
+};
 
 export default defineConfig({
-	base: '/',
-	root: 'src',
-	publicDir: '../public',
-	build: {
-		outDir: '../dist',
-		rollupOptions: {
-			input: {
-				main: 'src/index.html',
-				cibos: 'src/cibos.html',
-				credits: 'src/credits.html'
-			}
-		}
-	}
+	plugins: [sveltekit()],
+	server: serverOptions,
+	preview: serverOptions
 });

@@ -1,5 +1,17 @@
-.git/
-dist/
+.gitsecret/
+.svelte-kit/
+.yarn/
+build/
 node_modules/
+static/
+terraform/
+.env
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
 package-lock.json
-LICENSE
+yarn.lock

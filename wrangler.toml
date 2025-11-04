@@ -1,0 +1,20 @@
+name = "monomonet"
+preview_urls = false
+workers_dev = false
+compatibility_date = "2025-10-03"
+compatibility_flags = [
+	"nodejs_compat"
+]
+
+[observability]
+enabled = false
+
+[build]
+command = "yarn run build"
+
+[vars]
+NODE_VERSION = "22.21.1"
+
+[[routes]]
+pattern = "monomonet.com"
+custom_domain = true

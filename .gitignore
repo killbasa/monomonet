@@ -1,3 +1,15 @@
-.git/
+.svelte-kit/
+.wrangler/
+.yarn/cache/
+.yarn/install-state.gz
+build/
 node_modules/
-dist/
+.env*
+!.env.example
+*.vars
+.gitsecret/keys/random_seed
+!*.secret
+
+# Ignore files for PNPM and PNPM
+pnpm-lock.yaml
+package-lock.json
