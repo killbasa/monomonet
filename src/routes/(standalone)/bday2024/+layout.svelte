@@ -1,10 +1,9 @@
 <script lang="ts">
-	import '$assets/bday2024/styles.css';
-
 	import { setupSmooches } from '$assets/bday2024/lib/sounds';
 	import { setupButtonImage } from '$assets/bday2024/lib/buttons';
 	import { onMount } from 'svelte';
 	import type { LayoutProps } from './$types';
+	import { resolve } from '$app/paths';
 
 	let { children }: LayoutProps = $props();
 
@@ -33,6 +32,7 @@
 	<meta name="twitter:image" content="https://monomonet.com/ogimage.png" />
 
 	<meta name="theme-color" content="#FFFE72" />
+	<link type="text/css" rel="stylesheet" href="/bday2024/styles.css" />
 </svelte:head>
 
 <main>
@@ -54,13 +54,13 @@
 				alt="Spinning flower"
 			/>
 		</div>
-		<a href="/bday2024">
+		<a href={resolve('/(standalone)/bday2024/index.html')}>
 			<img id="home-anchor" alt="Home" />
 		</a>
-		<a href="/bday2024/cibos">
+		<a href={resolve('/(standalone)/bday2024/cibos.html')}>
 			<img id="cibos-anchor" alt="Cibo Hall of Fame" />
 		</a>
-		<a href="/bday2024/credits">
+		<a href={resolve('/(standalone)/bday2024/credits.html')}>
 			<img id="credits-anchor" alt="Credits" />
 		</a>
 	</div>

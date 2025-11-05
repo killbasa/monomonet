@@ -5,17 +5,15 @@ import { resolve } from '$app/paths';
 export const load: PageServerLoad = async () => {
 	const files = await getFileEntries([
 		{
-			name: 'birthday',
-			type: 'directory',
-			path: 'src/routes/(standalone)/bday2024',
-			href: resolve('/(app)/birthday'),
+			name: '..',
+			type: 'parent',
+			href: resolve('/'),
 		},
 		{
-			name: 'anniversary',
-			type: 'directory',
-			path: 'src/routes/(standalone)/anni2025',
-			href: resolve('/(app)/anniversary'),
-			hidden: true,
+			name: 'birthday_2024.html',
+			type: 'file',
+			path: 'src/routes/(standalone)/bday2024/index.html/+page.svelte',
+			href: resolve('/(standalone)/bday2024/index.html'),
 		},
 	]);
 

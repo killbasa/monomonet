@@ -1,0 +1,18 @@
+:root {
+	--mono-purple: #c695e8;
+	--mono-yellow: #fffe72;
+	--mono-red: #db6f6f;
+	--mono-blue: #609dff;
+	--mono-dark-blue: #2f6aca;
+	--mono-pink: #fe6cfe;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
