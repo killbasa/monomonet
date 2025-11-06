@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Player from './Player.svelte';
 	import { onMount } from 'svelte';
 
 	function createFlyingMono() {
@@ -51,6 +52,26 @@
 		setTimeout(() => img.remove(), duration * 1000);
 	}
 
+	function createJumpingMono() {
+		const img = document.createElement('img');
+		img.src = '/radio/flopmono.png';
+		img.className = 'jumping-mono';
+
+		img.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
+		img.style.setProperty('--start-rotation', `${Math.random() * 360}deg`);
+		img.style.setProperty('--jump-height', `-${10 + Math.random() * 20}vh`);
+
+		document.body.appendChild(img);
+
+		setTimeout(() => img.remove(), 1000);
+	}
+
+	function onBeat() {
+		for (let i = 0; i < 3; i++) createJumpingMono();
+
+		console.log('Beat detected');
+	}
+
 	onMount(() => {
 		const interval = setInterval(
 			() => {
@@ -67,6 +88,7 @@
 
 <div class="container">
 	<div class="card">
+		<!--
 		<iframe
 			title="Mono Monet Radio"
 			src="https://azura.killbasa.com/public/monomonet/embed?theme=dark"
@@ -74,6 +96,10 @@
 			allowtransparency={true}
 			style="width: 100%; min-height: 150px; border: 0;"
 		></iframe>
+		-->
+
+		<Player src="https://azura.killbasa.com" station="monomonet" onbeat={onBeat} />
+
 		<div style="display: flex; gap: 0.5rem;">
 			<a href="/">home</a>
 			<a href="https://www.youtube.com/@monomonet" target="_blank">mono's channel</a>
