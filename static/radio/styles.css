@@ -69,20 +69,31 @@ body::before {
 
 .flying-mono {
     position: fixed;
+	top: 0;
+	left: 0;
     width: 100px;
     height: 100px;
     pointer-events: none;
     z-index: 999;
-    animation: fly linear;
+    animation: var(--spin-dir) linear;
 }
 
-@keyframes fly {
+@keyframes fly-cw {
     0% {
         transform: translate(var(--start-x), var(--start-y)) rotate(0deg);
     }
     100% {
         transform: translate(var(--end-x), var(--end-y)) rotate(360deg);
     }
+}
+
+@keyframes fly-ccw {
+	0% {
+		transform: translate(var(--start-x), var(--start-y)) rotate(0deg);
+	}
+	100% {
+		transform: translate(var(--end-x), var(--end-y)) rotate(-360deg);
+	}
 }
 
 .jumping-mono {

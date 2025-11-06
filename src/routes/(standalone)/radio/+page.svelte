@@ -2,13 +2,24 @@
 	import Player from './Player.svelte';
 	import { onMount } from 'svelte';
 
+	let id = 0;
+	const flopmonos = new Map<number, HTMLImageElement>();
+
 	function createFlyingMono() {
 		const img = document.createElement('img');
 		img.src = '/radio/flopmono.png';
 		img.className = 'flying-mono';
 
+		const index = id++;
+		const duration = 3 + Math.random() * 4; // 3-7 seconds
+		const delay = duration * 1000;
 		const side = Math.floor(Math.random() * 4);
-		let startX, startY, endX, endY;
+		const clockwise = Math.random() < 0.5;
+
+		let startX: number;
+		let startY: number;
+		let endX: number;
+		let endY: number;
 
 		switch (side) {
 			case 0: // top
@@ -29,7 +40,7 @@
 				endX = Math.random() * window.innerWidth;
 				endY = -100;
 				break;
-			case 3: // left
+			default: // left
 				startX = -100;
 				startY = Math.random() * window.innerHeight;
 				endX = window.innerWidth + 100;
@@ -37,19 +48,25 @@
 				break;
 		}
 
-		img.style.left = '0px';
-		img.style.top = '0px';
 		img.style.setProperty('--start-x', `${startX}px`);
 		img.style.setProperty('--start-y', `${startY}px`);
 		img.style.setProperty('--end-x', `${endX}px`);
 		img.style.setProperty('--end-y', `${endY}px`);
-
-		const duration = 3 + Math.random() * 4; // 3-7 seconds
+		img.style.setProperty('--spin-dir', clockwise ? 'fly-cw' : 'fly-ccw');
 		img.style.animationDuration = `${duration}s`;
 
+		flopmonos.set(index, img);
 		document.body.appendChild(img);
 
-		setTimeout(() => img.remove(), duration * 1000);
+		// Sometimes it flashes in the corner, so fade it before
+		setTimeout(() => {
+			img.style.opacity = '0';
+		}, delay - 50);
+
+		setTimeout(() => {
+			flopmonos.delete(index);
+			img.remove();
+		}, delay);
 	}
 
 	function createJumpingMono() {
@@ -74,14 +91,15 @@
 
 	onMount(() => {
 		const interval = setInterval(
-			() => {
-				createFlyingMono();
-			},
-			2000 + Math.random() * 3000,
-		); // every 2-5 seconds
+			() => createFlyingMono(),
+			2000 + Math.random() * 3000, // every 2-5 seconds
+		);
 
 		return () => {
 			clearInterval(interval);
+			for (const flopper of flopmonos.values()) {
+				flopper.remove();
+			}
 		};
 	});
 </script>
