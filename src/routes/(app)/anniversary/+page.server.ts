@@ -12,8 +12,8 @@ export const load: PageServerLoad = async () => {
 		{
 			name: 'radio.html',
 			type: 'file',
-			path: 'src/routes/(standalone)/radio.html.html/+page.svelte',
-			href: resolve('/(standalone)/radio.html.html'),
+			path: 'src/routes/(standalone)/radio/+page.svelte',
+			href: resolve('/(standalone)/radio'),
 		},
 	]);
 

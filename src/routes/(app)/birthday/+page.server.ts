@@ -12,8 +12,8 @@ export const load: PageServerLoad = async () => {
 		{
 			name: 'birthday_2024.html',
 			type: 'file',
-			path: 'src/routes/(standalone)/bday2024/index.html.html/+page.svelte',
-			href: resolve('/(standalone)/bday2024/index.html.html'),
+			path: 'src/routes/(standalone)/bday2024/+page.svelte',
+			href: resolve('/(standalone)/bday2024'),
 		},
 	]);
 

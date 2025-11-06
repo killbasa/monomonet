@@ -54,13 +54,13 @@
 				alt="Spinning flower"
 			/>
 		</div>
-		<a href={resolve('/(standalone)/bday2024/index.html.html')}>
+		<a href={resolve('/(standalone)/bday2024')}>
 			<img id="home-anchor" alt="Home" />
 		</a>
-		<a href={resolve('/(standalone)/bday2024/cibos.html.html')}>
+		<a href={resolve('/(standalone)/bday2024/cibos')}>
 			<img id="cibos-anchor" alt="Cibo Hall of Fame" />
 		</a>
-		<a href={resolve('/(standalone)/bday2024/credits.html.html')}>
+		<a href={resolve('/(standalone)/bday2024/credits')}>
 			<img id="credits-anchor" alt="Credits" />
 		</a>
 	</div>
