@@ -5,7 +5,7 @@ import { resolve } from '$app/paths';
 export const load: PageServerLoad = async () => {
 	const files = await getFileEntries([
 		{
-			name: '..',
+			name: '../',
 			type: 'directory',
 			href: resolve('/'),
 		},
