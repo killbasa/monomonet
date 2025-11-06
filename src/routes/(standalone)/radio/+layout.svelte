@@ -5,15 +5,15 @@
 </script>
 
 <svelte:head>
-	<title>Radio 114 FM</title>
+	<title>Radio 124 FM</title>
 
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://monomonet.com/radio.html" />
-	<meta property="og:title" content="Radio 114 FM" />
+	<meta property="og:title" content="Radio 124 FM" />
 	<meta property="og:description" content="Mono Monet's DJ sets" />
 	<meta property="og:image" content="https://monomonet.com/radio/ogimage.webp" />
 
-	<meta name="twitter:title" content="Radio 114 FM" />
+	<meta name="twitter:title" content="Radio 124 FM" />
 	<meta name="twitter:description" content="Mono Monet's DJ sets" />
 	<meta name="twitter:image" content="https://monomonet.com/radio/ogimage.webp" />
 
