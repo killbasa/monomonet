@@ -16,7 +16,6 @@
 	<meta name="twitter:title" content="Radio 114 FM" />
 	<meta name="twitter:description" content="Mono Monet's DJ sets" />
 	<meta name="twitter:image" content="https://monomonet.com/radio/ogimage.webp" />
-	<meta name="twitter:card" content="summary_large_image" />
 
 	<meta name="theme-color" content="#FFFE72" />
 
