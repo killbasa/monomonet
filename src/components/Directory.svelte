@@ -20,45 +20,34 @@
 		</thead>
 		<tbody>
 			{#each files.filter((f) => !f.hidden) as file}
-				{#if file.type === 'parent'}
-					<tr>
-						<td class="name">
-							<span class="icon">📁</span>
-							<a href={file.href}>
-								{file.name}/
-							</a>
-						</td>
-						<td class="modified">-</td>
-						<td class="size">-</td>
-					</tr>
-				{:else}
-					<tr>
-						<td class="name">
-							{#if file.type === 'directory'}
-								<span class="icon">📁</span>
-							{:else}
-								<span class="icon">📄</span>
-							{/if}
-							<a href={file.href}>
-								{file.name}
-							</a>
-						</td>
-						<td class="modified">{formatTimestamp(file.modified)}</td>
+				<tr>
+					<td class="name">
 						{#if file.type === 'directory'}
-							<td class="size">-</td>
+							<span class="icon">📁</span>
 						{:else}
-							<td class="size">{file.size}</td>
+							<span class="icon">📄</span>
 						{/if}
-					</tr>
-				{/if}
+						<a href={file.href}>
+							{file.name}
+						</a>
+					</td>
+					{#if file.type === 'directory'}
+						<td class="modified">-</td>
+					{:else}
+						<td class="modified">{formatTimestamp(file.modified)}</td>
+					{/if}
+					{#if file.type === 'directory'}
+						<td class="size">-</td>
+					{:else}
+						<td class="size">{file.size}</td>
+					{/if}
+				</tr>
 			{/each}
 		</tbody>
 	</table>
-
 	<hr />
 	<div style="display:flex; gap: 0.5rem;">
-		<address>monomonet server</address>
-		-
+		this is a fansite -
 		<a href="https://github.com/killbasa/monomonet" target="_blank">source code</a>
 	</div>
 </div>

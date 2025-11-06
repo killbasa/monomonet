@@ -1,0 +1,19 @@
+# ansible-playbook playbooks/debug.yml
+---
+- name: Debug
+  become: false
+  gather_facts: true
+  hosts:
+    - radio
+  tasks:
+    - name: Print distribution
+      ansible.builtin.debug:
+        var: ansible_distribution
+
+    - name: Print lsb
+      ansible.builtin.debug:
+        var: ansible_lsb
+
+    - name: Print OS family
+      ansible.builtin.debug:
+        var: ansible_os_family

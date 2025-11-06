@@ -9,6 +9,8 @@ node_modules/
 *.vars
 .gitsecret/keys/random_seed
 !*.secret
+.env*
+!.env.template
 
 # Ignore files for PNPM and PNPM
 pnpm-lock.yaml

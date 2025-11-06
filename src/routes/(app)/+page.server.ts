@@ -7,15 +7,12 @@ export const load: PageServerLoad = async () => {
 		{
 			name: 'birthday',
 			type: 'directory',
-			path: 'src/routes/(standalone)/bday2024',
 			href: resolve('/(app)/birthday'),
 		},
 		{
 			name: 'anniversary',
 			type: 'directory',
-			path: 'src/routes/(standalone)/anni2025',
 			href: resolve('/(app)/anniversary'),
-			hidden: true,
 		},
 	]);
 

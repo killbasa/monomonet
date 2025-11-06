@@ -1,0 +1,25 @@
+# ansible-playbook playbooks/azuracast.yml
+---
+- name: Deploy azuracast
+  become: false
+  gather_facts: true
+  hosts:
+    - radio
+  vars:
+    application_path: /var/azuracast
+  tasks:
+    - name: Create application directory
+      ansible.builtin.file:
+        path: "{{ application_path }}"
+        state: directory
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: Download install script
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh
+        dest: "{{ application_path }}/docker.sh"
+        owner: root
+        group: root
+        mode: a+x

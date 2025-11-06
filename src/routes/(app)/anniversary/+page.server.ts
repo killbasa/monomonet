@@ -6,14 +6,14 @@ export const load: PageServerLoad = async () => {
 	const files = await getFileEntries([
 		{
 			name: '..',
-			type: 'parent',
+			type: 'directory',
 			href: resolve('/'),
 		},
 		{
-			name: 'anniversary_2025.html',
+			name: 'radio.html',
 			type: 'file',
-			path: 'src/routes/(standalone)/anni2025/index.html/+page.svelte',
-			href: resolve('/(standalone)/anni2025/index.html'),
+			path: 'src/routes/(standalone)/radio.html/+page.svelte',
+			href: resolve('/(standalone)/radio.html'),
 		},
 	]);
 

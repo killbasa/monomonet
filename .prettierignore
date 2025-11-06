@@ -2,6 +2,7 @@
 .svelte-kit/
 .yarn/
 .wrangler/
+.venv/
 build/
 node_modules/
 static/

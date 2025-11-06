@@ -3,14 +3,14 @@ import type { ResolvedPathname } from '$app/types';
 export type FileItem =
 	| {
 			name: string;
-			type: 'file' | 'directory';
+			type: 'file';
 			href: ResolvedPathname;
 			path: string;
 			hidden?: boolean;
 	  }
 	| {
 			name: string;
-			type: 'parent';
+			type: 'directory';
 			href: ResolvedPathname;
 			hidden?: boolean;
 	  };
@@ -18,7 +18,7 @@ export type FileItem =
 export type ResolvedFileItem =
 	| {
 			name: string;
-			type: 'file' | 'directory';
+			type: 'file';
 			href: ResolvedPathname;
 			size?: string;
 			modified: string;
@@ -26,7 +26,7 @@ export type ResolvedFileItem =
 	  }
 	| {
 			name: string;
-			type: 'parent';
+			type: 'directory';
 			href: ResolvedPathname;
 			modified: string;
 			hidden?: boolean;

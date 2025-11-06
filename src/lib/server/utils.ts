@@ -5,7 +5,7 @@ import type { FileItem, ResolvedFileItem } from '$components/types';
 export const getFileEntries = async (items: FileItem[]): Promise<ResolvedFileItem[]> => {
 	return await Promise.all(
 		items.map(async (item) => {
-			if (item.type === 'parent') {
+			if (item.type === 'directory') {
 				return {
 					name: item.name,
 					type: item.type,

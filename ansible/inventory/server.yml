@@ -1,0 +1,6 @@
+---
+services:
+  hosts:
+    radio:
+      ansible_host: 5.161.210.123
+      ansible_ssh_private_key_file: ~/.ssh/hetzner_core

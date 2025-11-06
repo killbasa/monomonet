@@ -11,6 +11,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.19"
     }
+
+    hcloud = {
+      source  = "hetznercloud/hcloud"
+      version = "~> 1.54"
+    }
   }
 
   backend "s3" {
@@ -21,5 +26,9 @@ terraform {
 }
 
 provider "cloudflare" {
-  api_token = var.cloudflare_dns_api_token
+  api_token = var.cloudflare_api_token
+}
+
+provider "hcloud" {
+  token = var.hcloud_token
 }

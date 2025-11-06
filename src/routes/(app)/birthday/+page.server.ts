@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
 	const files = await getFileEntries([
 		{
 			name: '..',
-			type: 'parent',
+			type: 'directory',
 			href: resolve('/'),
 		},
 		{

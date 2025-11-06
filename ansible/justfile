@@ -1,0 +1,11 @@
+install:
+	uv pip install ansible
+
+upgrade:
+	uv pip install --upgrade ansible
+
+# source .venv/bin/activate
+# or
+# source .venv/bin/activate.fish
+venv:
+	uv venv .venv
