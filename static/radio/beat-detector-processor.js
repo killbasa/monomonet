@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 class BeatDetectorProcessor extends AudioWorkletProcessor {
     constructor() {
         super();
@@ -9,7 +11,12 @@ class BeatDetectorProcessor extends AudioWorkletProcessor {
         this.COOLDOWN_MS = 150 / 1000; // cooldown in seconds
     }
 
-    process(inputs, outputs, parameters) {
+	/**
+	 * @param {Float32Array[][]} inputs
+	 * @param {Float32Array[][]} outputs
+	 * @param {{[key: string]: Float32Array}} parameters
+	 */
+    process(inputs, _outputs, _parameters) {
         const input = inputs[0][0];
 
         if (!input || input.length === 0) {

@@ -35,7 +35,7 @@ resource "hcloud_firewall" "radio_firewall" {
     protocol  = "tcp"
     port      = "22"
     source_ips = [
-      "70.55.119.160/32"
+      "0.0.0.0/0"
     ]
   }
 

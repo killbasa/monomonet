@@ -1,6 +1,19 @@
 <script lang="ts">
+	import MuteIcon from '$components/icons/MuteIcon.svelte';
+	import PauseIcon from '$components/icons/PauseIcon.svelte';
+	import PlayIcon from '$components/icons/PlayIcon.svelte';
+	import UnmuteIcon from '$components/icons/UnmuteIcon.svelte';
 	import { onMount } from 'svelte';
-	let { src, station, onbeat } = $props();
+
+	let {
+		src,
+		station,
+		onbeat,
+	}: {
+		src: string;
+		station: string;
+		onbeat: () => void;
+	} = $props();
 
 	// gets returned from the endpoint on initial connect
 	interface SSEConnect {
@@ -28,6 +41,7 @@
 				played_at: number;
 				song: {
 					title: string;
+					artist: string;
 					art: string;
 				};
 			};
@@ -76,6 +90,7 @@
 	let gainNode: GainNode | null = $state(null);
 	let playing: boolean = $state(false);
 	let volume: number = $state(50);
+	let previousVolume: number = $state(50);
 
 	$effect(() => {
 		if (!audio) return;
@@ -100,7 +115,7 @@
 		}
 	});
 
-	function updateData(data: NowPlayingData) {
+	function updateData(data: NowPlayingData): void {
 		if (data.np.station.listen_url != nowplaying?.np.station.listen_url && audio) {
 			audio.src = `${data.np.station.listen_url}?refresh=${Date.now()}`;
 		}
@@ -108,10 +123,10 @@
 		nowplaying = data;
 
 		elapsedSeconds = Math.floor(nowplaying.np.now_playing.elapsed);
-		// console.log('Now Playing Update:', data);
+		console.log('Now Playing Update:', data);
 	}
 
-	async function togglePlay() {
+	async function togglePlay(): Promise<void> {
 		if (!audio) return;
 
 		if (!audio_ctx) {
@@ -126,13 +141,12 @@
 		} else {
 			audio.pause();
 		}
-		// Implement actual audio play/pause logic here
 	}
 
-	async function setupAudioContext() {
+	async function setupAudioContext(): Promise<void> {
 		if (!audio) return;
 
-		audio_ctx = new window.AudioContext();
+		audio_ctx = new AudioContext();
 		const source = audio_ctx.createMediaElementSource(audio);
 
 		// offset gain from the audio source volume
@@ -176,7 +190,10 @@
 			}),
 		});
 
-		const evtSource = new EventSource(`${src}/api/live/nowplaying/sse?` + uriParams.toString());
+		const url = new URL('/api/live/nowplaying/sse', src);
+		url.search = uriParams.toString();
+
+		const evtSource = new EventSource(url.href);
 
 		evtSource.onmessage = (event) => {
 			const data = JSON.parse(event.data) as SSEUpdate | SSEConnect;
@@ -190,15 +207,11 @@
 			}
 		};
 
-		let updateInterval = setInterval(() => {
+		const updateInterval = setInterval(() => {
 			if (nowplaying) {
 				elapsedSeconds++;
 			}
 		}, 1000);
-
-		audio = new Audio();
-		audio.crossOrigin = 'anonymous';
-		audio.volume = volume / 100;
 
 		return () => {
 			evtSource.close();
@@ -208,6 +221,8 @@
 </script>
 
 <div class="player">
+	<audio bind:this={audio} crossorigin="anonymous"></audio>
+
 	<div class="player-nowplaying">
 		{#if nowplaying}
 			{#if nowplaying.np.now_playing.song.art}
@@ -235,30 +250,35 @@
 
 	<div class="player-controls">
 		<button onclick={togglePlay}>
-			<svg
-				viewBox="0 0 24 24"
-				class="icon"
-				fill="currentColor"
-				focusable="false"
-				aria-hidden="true"
-			>
+			<svg viewBox="0 0 24 24" fill="currentColor" focusable="false" aria-hidden="true">
 				<!-- just steal the icons from the old embed for now -->
 				{#if playing}
-					<path
-						fill="currentColor"
-						d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m4 14H8V8h8z
-					"
-					/>
+					<PauseIcon />
 				{:else}
-					<path
-						fill="currentColor"
-						d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2M9.5 16.5v-9l7 4.5z"
-					/>
+					<PlayIcon />
 				{/if}
 			</svg>
 		</button>
 
-		<input type="range" min="0" max="100" bind:value={volume} />
+		<div>
+			<button
+				onclick={() => {
+					if (volume === 0) {
+						volume = previousVolume;
+					} else {
+						previousVolume = volume;
+						volume = 0;
+					}
+				}}
+			>
+				{#if volume === 0}
+					<MuteIcon />
+				{:else}
+					<UnmuteIcon />
+				{/if}
+			</button>
+			<input type="range" min="0" max="100" bind:value={volume} />
+		</div>
 	</div>
 </div>
 
@@ -268,7 +288,6 @@
 		flex-direction: column;
 		align-items: center;
 		padding: 0.2rem;
-		background-color: #f9f9f9;
 		border-radius: 8px;
 		gap: 5px;
 	}
@@ -283,7 +302,7 @@
 		width: 64px;
 		height: 64px;
 		object-fit: cover;
-		border-radius: 8px;
+		border: thin solid #ccc;
 	}
 
 	.nowplaying-info-top {
@@ -321,7 +340,7 @@
 
 	.player-controls svg {
 		display: block;
-		width: 1.7em;
-		height: 1.5em;
+		width: 2em;
+		height: 2em;
 	}
 </style>

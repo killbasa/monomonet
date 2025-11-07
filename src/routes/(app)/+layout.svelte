@@ -15,7 +15,6 @@
 	<meta name="twitter:title" content="Mono Monet Fansite" />
 	<meta name="twitter:image" content="https://monomonet.com/ogimage.png" />
 
-	<meta name="theme-color" content="#FFFE72" />
 	<link type="text/css" rel="stylesheet" href="/base/styles.css" />
 </svelte:head>
 
