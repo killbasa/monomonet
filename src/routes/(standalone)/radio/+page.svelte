@@ -3,18 +3,23 @@
 	import { onMount } from 'svelte';
 
 	let id = 0;
+	let showCredits = $state(false);
 	const flopmonos = new Map<number, HTMLImageElement>();
+
+	function toggleCredits() {
+		showCredits = !showCredits;
+	}
 
 	function createFlyingMono() {
 		const img = document.createElement('img');
 		img.src = '/radio/flopmono.png';
 		img.className = 'flying-mono';
 
-		const index = id++;
-		const duration = 3 + Math.random() * 4; // 3-7 seconds
-		const delay = duration * 1000;
 		const side = Math.floor(Math.random() * 4);
 		const clockwise = Math.random() < 0.5;
+
+		const duration = 3 + Math.random() * 4; // 3-7 seconds
+		const delay = duration * 1000;
 
 		let startX: number;
 		let startY: number;
@@ -55,6 +60,7 @@
 		img.style.setProperty('--spin-dir', clockwise ? 'fly-cw' : 'fly-ccw');
 		img.style.animationDuration = `${duration}s`;
 
+		const index = id++;
 		flopmonos.set(index, img);
 		document.body.appendChild(img);
 
@@ -78,9 +84,14 @@
 		img.style.setProperty('--start-rotation', `${Math.random() * 360}deg`);
 		img.style.setProperty('--jump-height', `-${10 + Math.random() * 20}vh`);
 
+		const index = id++;
+		flopmonos.set(index, img);
 		document.body.appendChild(img);
 
-		setTimeout(() => img.remove(), 1000);
+		setTimeout(() => {
+			flopmonos.delete(index);
+			img.remove();
+		}, 1000);
 	}
 
 	function onBeat() {
@@ -104,25 +115,38 @@
 	});
 </script>
 
-<div class="container">
-	<div class="card">
-		<!--
-		<iframe
-			title="Mono Monet Radio"
-			src="https://azura.killbasa.com/public/monomonet/embed?theme=dark"
-			frameborder="0"
-			allowtransparency={true}
-			style="width: 100%; min-height: 150px; border: 0;"
-		></iframe>
-		-->
-
-		<Player src="https://azura.killbasa.com" station="monomonet" onbeat={onBeat} />
-
+<div class="container" style="position: relative;">
+	<div class="card" style="position: absolute; top: 1rem; left: 1rem;">
 		<div style="display: flex; gap: 0.5rem;">
 			<a href="/">home</a>
 			<a href="https://www.youtube.com/@monomonet" target="_blank">mono's channel</a>
+		</div>
+	</div>
+
+	<div class="card">
+		<Player src="https://azura.killbasa.com" station="monomonet" onbeat={onBeat} />
+
+		<div style="display: flex; gap: 0.5rem; padding-top: 1rem;">
+			<button class="btn" onclick={createFlyingMono}>flop</button>
+			<button class="btn" onclick={toggleCredits}>credits</button>
+		</div>
+	</div>
+
+	{#if showCredits}
+		<div class="card" style="position: absolute; top: 1rem; right: 1rem; width: 300px;">
+			<h2 style="margin: 0;">credits</h2>
+
+			<p>happy 2 year anniversary mono :&rpar;</p>
+
+			<div>
+				<p style="margin-bottom: 0;">made by:</p>
+				<ul style="padding-left: 1rem; margin-top: 0;">
+					<li>killbasa</li>
+					<li>sakanaa</li>
+				</ul>
+			</div>
+
 			<a href="https://github.com/killbasa/monomonet" target="_blank">source code</a>
 		</div>
-		<button style="margin-top: 0.5rem;" onclick={createFlyingMono}>flop</button>
-	</div>
+	{/if}
 </div>

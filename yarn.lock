@@ -534,7 +534,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.1, @eslint/js@npm:^9.28.0":
+"@eslint/js@npm:9.39.1, @eslint/js@npm:^9.39.1":
   version: 9.39.1
   resolution: "@eslint/js@npm:9.39.1"
   checksum: 10/b10b9b953212c0f3ffca475159bbe519e9e98847200c7432d1637d444fddcd7b712d2b7710a7dc20510f9cfbe8db330039b2aad09cb55d9545b116d940dbeed2
@@ -839,26 +839,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@killbasa/eslint-config@npm:^3.1.5":
-  version: 3.1.5
-  resolution: "@killbasa/eslint-config@npm:3.1.5"
+"@killbasa/eslint-config@npm:^3.1.6":
+  version: 3.1.6
+  resolution: "@killbasa/eslint-config@npm:3.1.6"
   dependencies:
-    "@eslint/js": "npm:^9.28.0"
-    "@typescript-eslint/eslint-plugin": "npm:^8.34.0"
-    "@typescript-eslint/parser": "npm:^8.34.0"
-    "@typescript-eslint/utils": "npm:^8.34.0"
-    eslint: "npm:^9.28.0"
-    eslint-import-resolver-typescript: "npm:^4.4.3"
-    eslint-plugin-import: "npm:^2.30.0"
-    eslint-plugin-prettier: "npm:^5.4.1"
-    eslint-plugin-svelte: "npm:^3.9.2"
-    globals: "npm:^16.2.0"
-    prettier: "npm:^3.5.3"
-    svelte-eslint-parser: "npm:^1.2.0"
-    typescript-eslint: "npm:^8.34.0"
+    "@eslint/js": "npm:^9.39.1"
+    "@typescript-eslint/eslint-plugin": "npm:^8.46.3"
+    "@typescript-eslint/parser": "npm:^8.46.3"
+    "@typescript-eslint/utils": "npm:^8.46.3"
+    eslint: "npm:^9.39.1"
+    eslint-import-resolver-typescript: "npm:^4.4.4"
+    eslint-plugin-import: "npm:^2.32.0"
+    eslint-plugin-prettier: "npm:^5.5.4"
+    eslint-plugin-svelte: "npm:^3.13.0"
+    globals: "npm:^16.5.0"
+    prettier: "npm:^3.6.2"
+    svelte-eslint-parser: "npm:^1.4.0"
+    typescript-eslint: "npm:^8.46.3"
   peerDependencies:
     eslint: ^9
-  checksum: 10/661a883615d2c831cd27322151d06960fa2073c6d2676c57137fa342acd67a4cd66dd5647f1bf557bc99aa5ed016b30f599a84be695a9727bf3e3773993a962f
+  checksum: 10/da1fcce43b0fe928b8ced6da5d6f360b16c75c303653a76cb4a2644ec28dc174ee3b8e3af076037a84003dd3cfacc27d2009bdb639627e6a6f83a45ad4abc480
   languageName: node
   linkType: hard
 
@@ -1280,7 +1280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:8.46.3, @typescript-eslint/eslint-plugin@npm:^8.34.0":
+"@typescript-eslint/eslint-plugin@npm:8.46.3, @typescript-eslint/eslint-plugin@npm:^8.46.3":
   version: 8.46.3
   resolution: "@typescript-eslint/eslint-plugin@npm:8.46.3"
   dependencies:
@@ -1301,7 +1301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:8.46.3, @typescript-eslint/parser@npm:^8.34.0":
+"@typescript-eslint/parser@npm:8.46.3, @typescript-eslint/parser@npm:^8.46.3":
   version: 8.46.3
   resolution: "@typescript-eslint/parser@npm:8.46.3"
   dependencies:
@@ -1392,7 +1392,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.46.3, @typescript-eslint/utils@npm:^8.34.0":
+"@typescript-eslint/utils@npm:8.46.3, @typescript-eslint/utils@npm:^8.46.3":
   version: 8.46.3
   resolution: "@typescript-eslint/utils@npm:8.46.3"
   dependencies:
@@ -2563,7 +2563,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:^4.4.3":
+"eslint-import-resolver-typescript@npm:^4.4.4":
   version: 4.4.4
   resolution: "eslint-import-resolver-typescript@npm:4.4.4"
   dependencies:
@@ -2599,7 +2599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.30.0":
+"eslint-plugin-import@npm:^2.32.0":
   version: 2.32.0
   resolution: "eslint-plugin-import@npm:2.32.0"
   dependencies:
@@ -2628,7 +2628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.4.1":
+"eslint-plugin-prettier@npm:^5.5.4":
   version: 5.5.4
   resolution: "eslint-plugin-prettier@npm:5.5.4"
   dependencies:
@@ -2648,7 +2648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-svelte@npm:^3.9.2":
+"eslint-plugin-svelte@npm:^3.13.0":
   version: 3.13.0
   resolution: "eslint-plugin-svelte@npm:3.13.0"
   dependencies:
@@ -2696,7 +2696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:9.39.1, eslint@npm:^9.28.0":
+"eslint@npm:9.39.1, eslint@npm:^9.39.1":
   version: 9.39.1
   resolution: "eslint@npm:9.39.1"
   dependencies:
@@ -3128,7 +3128,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^16.0.0, globals@npm:^16.2.0":
+"globals@npm:^16.0.0, globals@npm:^16.5.0":
   version: 16.5.0
   resolution: "globals@npm:16.5.0"
   checksum: 10/f9e8a2a13f50222c127030a619e283e7bbfe32966316bdde0715af1d15a7e40cb9c24ff52cad59671f97762ed8b515353c2f8674f560c63d9385f19ee26735a6
@@ -4018,7 +4018,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "monomonet-fansite@workspace:."
   dependencies:
-    "@killbasa/eslint-config": "npm:^3.1.5"
+    "@killbasa/eslint-config": "npm:^3.1.6"
     "@sveltejs/adapter-cloudflare": "npm:^7.2.4"
     "@sveltejs/kit": "npm:^2.48.4"
     "@sveltejs/vite-plugin-svelte": "npm:^6.2.1"
@@ -4426,7 +4426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.5.3, prettier@npm:^3.6.2":
+"prettier@npm:^3.6.2":
   version: 3.6.2
   resolution: "prettier@npm:3.6.2"
   bin:
@@ -5189,7 +5189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-eslint-parser@npm:^1.2.0, svelte-eslint-parser@npm:^1.4.0":
+"svelte-eslint-parser@npm:^1.4.0":
   version: 1.4.0
   resolution: "svelte-eslint-parser@npm:1.4.0"
   dependencies:
@@ -5369,7 +5369,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.34.0":
+"typescript-eslint@npm:^8.46.3":
   version: 8.46.3
   resolution: "typescript-eslint@npm:8.46.3"
   dependencies:

@@ -20,7 +20,7 @@
 		"prepare": "husky"
 	},
 	"devDependencies": {
-		"@killbasa/eslint-config": "^3.1.5",
+		"@killbasa/eslint-config": "^3.1.6",
 		"@sveltejs/adapter-cloudflare": "^7.2.4",
 		"@sveltejs/kit": "^2.48.4",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
