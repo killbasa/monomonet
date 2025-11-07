@@ -117,7 +117,7 @@
 
 	function updateData(data: NowPlayingData): void {
 		if (data.np.station.listen_url != nowplaying?.np.station.listen_url && audio) {
-			audio.src = `${data.np.station.listen_url}?refresh=${Date.now()}`;
+			reloadAudioSrc();
 		}
 
 		nowplaying = data;
@@ -137,9 +137,14 @@
 
 		playing = !playing;
 		if (playing) {
-			audio.play();
-		} else {
-			audio.pause();
+			// make sure to catch up to the live audio
+			reloadAudioSrc();
+		}
+	}
+
+	function reloadAudioSrc(): void {
+		if (audio && nowplaying) {
+			audio.src = `${nowplaying.np.station.listen_url}?refresh=${Date.now()}`;
 		}
 	}
 
