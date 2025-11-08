@@ -97,6 +97,10 @@
 		}, 1000);
 	}
 
+	function explode() {
+		for (let i = 0; i < 10; i++) createFlyingMono();
+	}
+
 	function onBeat() {
 		for (let i = 0; i < 3; i++) createJumpingMono();
 
@@ -131,6 +135,7 @@
 
 		<div style="display: flex; gap: 0.5rem; padding-top: 1rem;">
 			<button class="btn" onclick={createFlyingMono}>flop</button>
+			<button class="btn" onclick={explode}>explode</button>
 			<button class="btn" onclick={toggleCredits}>credits</button>
 		</div>
 	</div>
