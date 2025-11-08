@@ -203,8 +203,6 @@
 		evtSource.onmessage = (event) => {
 			const data = JSON.parse(event.data) as SSEUpdate | SSEConnect;
 
-			console.log(data);
-
 			if ('pub' in data) {
 				updateData(data.pub!.data);
 			} else if ('connect' in data) {
