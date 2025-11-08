@@ -76,25 +76,16 @@ body::before {
     height: 100px;
     pointer-events: none;
     z-index: 999;
-    animation: var(--spin-dir) linear;
+    animation: fly linear;
 }
 
-@keyframes fly-cw {
+@keyframes fly {
     0% {
-        transform: translate(var(--start-x), var(--start-y)) rotate(0deg);
+        transform: translate(var(--start-x), var(--start-y)) rotate(var(--start-rotation));
     }
     100% {
-        transform: translate(var(--end-x), var(--end-y)) rotate(360deg);
+        transform: translate(var(--end-x), var(--end-y)) rotate(calc(var(--start-rotation) + var(--spin-direction)));
     }
-}
-
-@keyframes fly-ccw {
-	0% {
-		transform: translate(var(--start-x), var(--start-y)) rotate(0deg);
-	}
-	100% {
-		transform: translate(var(--end-x), var(--end-y)) rotate(-360deg);
-	}
 }
 
 .jumping-mono {
@@ -119,7 +110,7 @@ body::before {
 	}
 	100% {
 		translate: 0 0;
-		transform: rotate(calc(var(--start-rotation) + var(--direction)));
+		transform: rotate(calc(var(--start-rotation) + var(--spin-direction)));
 	}
 }
 

@@ -57,7 +57,8 @@
 		img.style.setProperty('--start-y', `${startY}px`);
 		img.style.setProperty('--end-x', `${endX}px`);
 		img.style.setProperty('--end-y', `${endY}px`);
-		img.style.setProperty('--spin-dir', clockwise ? 'fly-cw' : 'fly-ccw');
+		img.style.setProperty('--start-rotation', `${Math.random() * 360}deg`);
+		img.style.setProperty('--spin-direction', clockwise ? '360deg' : '-360deg');
 		img.style.animationDuration = `${duration}s`;
 
 		const index = id++;
@@ -84,7 +85,7 @@
 
 		img.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
 		img.style.setProperty('--start-rotation', `${Math.random() * 360}deg`);
-		img.style.setProperty('--direction', clockwise ? '90deg' : '-90deg');
+		img.style.setProperty('--spin-direction', clockwise ? '90deg' : '-90deg');
 		img.style.setProperty('--jump-height', `-${10 + Math.random() * 20}vh`);
 
 		const index = id++;
