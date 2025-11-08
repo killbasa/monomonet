@@ -90,7 +90,7 @@ body::before {
 
 .jumping-mono {
 	position: fixed;
-	bottom: -100px;
+	bottom: -110px;
 	width: 100px;
 	height: 100px;
 	pointer-events: none;
