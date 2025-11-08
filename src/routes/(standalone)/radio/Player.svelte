@@ -203,6 +203,8 @@
 		evtSource.onmessage = (event) => {
 			const data = JSON.parse(event.data) as SSEUpdate | SSEConnect;
 
+			console.log(data);
+
 			if ('pub' in data) {
 				updateData(data.pub!.data);
 			} else if ('connect' in data) {
@@ -231,11 +233,7 @@
 	<div class="player-nowplaying">
 		{#if nowplaying}
 			{#if nowplaying.np.now_playing.song.art}
-				<img
-					class="nowplaying-art"
-					src={nowplaying.np.now_playing.song.art}
-					alt="Album Art"
-				/>
+				<img class="nowplaying-art" src="/radio/album_art.jpg" alt="Album Art" />
 			{/if}
 			<div class="nowplaying-info">
 				<div class="nowplaying-info-top">
