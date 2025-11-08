@@ -5,8 +5,8 @@ export type FileItem =
 			name: string;
 			type: 'file';
 			href: ResolvedPathname;
-			path: string;
 			hidden?: boolean;
+			path: string;
 	  }
 	| {
 			name: string;
@@ -20,14 +20,8 @@ export type ResolvedFileItem =
 			name: string;
 			type: 'file';
 			href: ResolvedPathname;
+			hidden?: boolean;
 			size?: string;
 			modified: string;
-			hidden?: boolean;
 	  }
-	| {
-			name: string;
-			type: 'directory';
-			href: ResolvedPathname;
-			modified: string;
-			hidden?: boolean;
-	  };
+	| Extract<FileItem, { type: 'directory' }>;

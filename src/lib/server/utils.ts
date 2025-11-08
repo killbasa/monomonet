@@ -6,36 +6,19 @@ export const getFileEntries = async (items: FileItem[]): Promise<ResolvedFileIte
 	return await Promise.all(
 		items.map(async (item) => {
 			if (item.type === 'directory') {
-				return {
-					name: item.name,
-					type: item.type,
-					href: item.href,
-					hidden: item.hidden,
-					modified: '-',
-				};
+				return item;
 			}
 
+			const path = resolve(item.path);
+			const info = await stat(path);
+
 			return {
-				name: item.name,
-				type: item.type,
-				href: item.href,
-				path: item.path,
-				hidden: item.hidden,
-				modified: item.path ? await checkLastModified(item.path) : '-',
-				size: item.path ? await checkFileSize(item.path) : undefined,
+				...item,
+				modified: info.mtime.toISOString(),
+				size: formatBytes(info.size),
 			};
 		}),
 	);
-};
-
-export const checkLastModified = async (path: string): Promise<string> => {
-	const result = await stat(resolve(path));
-	return result.mtime.toISOString();
-};
-
-export const checkFileSize = async (path: string): Promise<string> => {
-	const result = await stat(resolve(path));
-	return formatBytes(result.size);
 };
 
 const formatBytes = (bytes: number): string => {

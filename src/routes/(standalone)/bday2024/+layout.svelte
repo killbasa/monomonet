@@ -7,6 +7,13 @@
 
 	let { children }: LayoutProps = $props();
 
+	const tags = {
+		title: 'Happy birthday Mono!',
+		description: "Tabemonos celebrate Mono Monet's birthday!",
+		image: 'https://monomonet.com/ogimage.png',
+		url: 'https://monomonet.com/bday2024',
+	};
+
 	onMount(async () => {
 		await Promise.all([
 			setupSmooches(),
@@ -18,18 +25,18 @@
 </script>
 
 <svelte:head>
-	<title>Mono Monet Fansite</title>
-	<meta name="description" content="Tabemonos celebrate Mono Monet's birthday!" />
+	<title>{tags.title}</title>
+	<meta name="description" content={tags.description} />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://monomonet.com" />
-	<meta property="og:title" content="Happy birthday Mono!" />
-	<meta property="og:description" content="Tabemonos celebrate Mono Monet's birthday!" />
-	<meta property="og:image" content="https://monomonet.com/ogimage.png" />
+	<meta property="og:url" content={tags.url} />
+	<meta property="og:title" content={tags.title} />
+	<meta property="og:description" content={tags.description} />
+	<meta property="og:image" content={tags.image} />
 
-	<meta name="twitter:title" content="Happy birthday Mono!" />
-	<meta name="twitter:description" content="Tabemonos celebrate Mono Monet's birthday!" />
-	<meta name="twitter:image" content="https://monomonet.com/ogimage.png" />
+	<meta name="twitter:title" content={tags.title} />
+	<meta name="twitter:description" content={tags.description} />
+	<meta name="twitter:image" content={tags.image} />
 
 	<link type="text/css" rel="stylesheet" href="/bday2024/styles.css" />
 </svelte:head>
@@ -44,7 +51,9 @@
 				height="50px"
 				alt="Spinning flower"
 			/>
-			<img src="/bday2024/images/monolove.webp" width="150px" alt="Mono love" />
+			<a href={resolve('/')}>
+				<img src="/bday2024/images/monolove.webp" width="150px" alt="Mono love" />
+			</a>
 			<img
 				class="spinning-flower-image"
 				src="/bday2024/images/spinning_flower.gif"
