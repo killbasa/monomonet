@@ -229,10 +229,8 @@
 	<audio bind:this={audio} crossorigin="anonymous"></audio>
 
 	<div class="player-nowplaying">
+		<img class="nowplaying-art" src="/radio/album_art.jpg" alt="Album Art" />
 		{#if nowplaying}
-			{#if nowplaying.np.now_playing.song.art}
-				<img class="nowplaying-art" src="/radio/album_art.jpg" alt="Album Art" />
-			{/if}
 			<div class="nowplaying-info">
 				<div class="nowplaying-info-top">
 					<div class="nowplaying-title">{nowplaying.np.now_playing.song.title}</div>
@@ -297,6 +295,7 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+		width: 350px;
 	}
 
 	.nowplaying-art {
@@ -306,12 +305,14 @@
 		border: thin solid #ccc;
 	}
 
+	.nowplaying-info {
+		width: 100%;
+	}
+
 	.nowplaying-info-top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 100%;
-		gap: 1rem;
 	}
 	.nowplaying-title {
 		font-size: 1.2rem;

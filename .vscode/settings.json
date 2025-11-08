@@ -22,5 +22,8 @@
 	},
 	"[terraform-vars]": {
 		"editor.defaultFormatter": "hashicorp.terraform"
+	},
+	"files.associations": {
+		"*.css": "css"
 	}
 }

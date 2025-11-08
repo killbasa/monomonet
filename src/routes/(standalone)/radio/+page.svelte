@@ -80,8 +80,11 @@
 		img.src = '/radio/flopmono.png';
 		img.className = 'jumping-mono';
 
+		const clockwise = Math.random() < 0.5;
+
 		img.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
 		img.style.setProperty('--start-rotation', `${Math.random() * 360}deg`);
+		img.style.setProperty('--direction', clockwise ? '90deg' : '-90deg');
 		img.style.setProperty('--jump-height', `-${10 + Math.random() * 20}vh`);
 
 		const index = id++;

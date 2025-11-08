@@ -104,13 +104,14 @@ body::before {
 	height: 100px;
 	pointer-events: none;
 	z-index: 999;
-	animation: jump 0.6s forwards, jumpRotate 0.6s forwards;
+	animation: jump 0.6s forwards;
 }
 
 @keyframes jump {
 	0% {
 		translate: 0 0;
 		animation-timing-function: ease-out;
+		transform: rotate(var(--start-rotation));
 	}
 	50% {
 		translate: 0 var(--jump-height);
@@ -118,14 +119,7 @@ body::before {
 	}
 	100% {
 		translate: 0 0;
-	}
-}
-@keyframes jumpRotate {
-	0% {
-		transform: rotate(var(--start-rotation));
-	}
-	100% {
-		transform: rotate(calc(var(--start-rotation) + 90deg));
+		transform: rotate(calc(var(--start-rotation) + var(--direction)));
 	}
 }
 
