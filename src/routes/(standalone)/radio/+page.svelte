@@ -97,7 +97,7 @@
 	function onBeat() {
 		for (let i = 0; i < 3; i++) createJumpingMono();
 
-		console.log('Beat detected');
+		// console.log('Beat detected');
 	}
 
 	onMount(() => {

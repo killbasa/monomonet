@@ -123,7 +123,7 @@
 		nowplaying = data;
 
 		elapsedSeconds = Math.floor(nowplaying.np.now_playing.elapsed);
-		console.log('Now Playing Update:', data);
+		// console.log('Now Playing Update:', data);
 	}
 
 	async function togglePlay(): Promise<void> {
@@ -208,7 +208,7 @@
 			} else if ('connect' in data) {
 				updateData(data.connect.subs[`station:${station}`].publications.slice(-1)[0].data);
 			} else {
-				console.warn('Unknown SSE data format:', data);
+				// console.warn('Unknown SSE data format:', data);
 			}
 		};
 
