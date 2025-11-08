@@ -10,7 +10,7 @@ export const getFileEntries = async (items: FileItem[]): Promise<ResolvedFileIte
 			}
 
 			const path = resolve(item.path);
-			const info = await stat(resolve(path));
+			const info = await stat(path);
 
 			return {
 				...item,
