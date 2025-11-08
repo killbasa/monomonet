@@ -3,6 +3,15 @@ resource "cloudflare_dns_record" "azura_endpoint" {
   name    = "azura.${data.cloudflare_zone.killbasa_com.name}"
   content = hcloud_server.radio_node.ipv4_address
   type    = "A"
-  ttl     = 300
+  ttl     = 1
+  proxied = false
+}
+
+resource "cloudflare_dns_record" "azura_endpoint_ipv6" {
+  zone_id = data.cloudflare_zone.killbasa_com.zone_id
+  name    = "azura.${data.cloudflare_zone.killbasa_com.name}"
+  content = hcloud_server.radio_node.ipv6_address
+  type    = "AAAA"
+  ttl     = 1
   proxied = false
 }
