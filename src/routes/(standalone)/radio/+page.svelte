@@ -150,8 +150,12 @@
 			<div>
 				<p style="margin-bottom: 0;">made by:</p>
 				<ul style="padding-left: 1rem; margin-top: 0;">
-					<li>killbasa</li>
-					<li>sakanaa</li>
+					<li>
+						<a href="https://x.com/Killbasa1" target="_blank">killbasa</a>
+					</li>
+					<li>
+						<a href="https://x.com/sakanaaa0" target="_blank">sakanaa</a>
+					</li>
 				</ul>
 			</div>
 
