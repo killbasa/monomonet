@@ -132,7 +132,7 @@
 	</div>
 
 	<div class="card">
-		<Player src="https://azura.killbasa.com" station="monomonet" onbeat={onBeat} />
+		<Player src="https://radio.killbasa.com" station="monomonet" onbeat={onBeat} />
 
 		<div style="display: flex; gap: 0.5rem; padding-top: 1rem;">
 			<button class="btn" onclick={createFlyingMono}>flop</button>
