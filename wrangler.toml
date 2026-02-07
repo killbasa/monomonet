@@ -18,7 +18,7 @@ enabled = false
 command = "yarn run build"
 
 [vars]
-NODE_VERSION = "22.21.1"
+NODE_VERSION = "24.13.0"
 
 [[routes]]
 pattern = "monomonet.com"
